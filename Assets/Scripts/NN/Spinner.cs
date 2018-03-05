@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using NN;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace NN{
 public class Spinner : MonoBehaviour {
 	private Vector2 delta = Vector2.zero;
 	private Vector2 lastPos = Vector2.zero;
@@ -68,4 +70,5 @@ public class Spinner : MonoBehaviour {
 			return false;
 		}
 	}
+}
 }
