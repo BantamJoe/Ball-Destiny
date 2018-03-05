@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using SL;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+namespace SL{
 public class GameView : MonoBehaviour {
 
 	private static GameView _instance;
@@ -25,9 +27,9 @@ public class GameView : MonoBehaviour {
 	void Start () {
 		BallSpawner.Instance.setup ();
 
-		color = UnityEngine.Random.Range (0, BallSpawner.colors.Length);
-		shape = Random.Range (0, BallSpawner.shapes.Length);
-		GameObject chosen = BallSpawner.shapes [shape];
+		color = UnityEngine.Random.Range (0, BallSpawner.Instance.colors.Length);
+		shape = Random.Range (0, BallSpawner.Instance.shapes.Length);
+		GameObject chosen = BallSpawner.Instance.shapes [shape];
 
 		// setWeighting ();
 
@@ -39,7 +41,7 @@ public class GameView : MonoBehaviour {
 		// Initialize the Indicator Object
 		var indicator = Instantiate (chosen) as GameObject;
 		indicator.transform.parent = transform;
-		indicator.GetComponent<Renderer> ().material.color = BallSpawner.colors[color];
+		indicator.GetComponent<Renderer> ().material.color = BallSpawner.Instance.colors[color];
 		indicator.transform.position = new Vector3 (x_axis, y_axis, 0);
 		indicator.GetComponent<Collider2D> ().enabled = false;
 		UnityEngine.Object.Destroy(indicator.GetComponent<Rigidbody2D>());
@@ -47,34 +49,34 @@ public class GameView : MonoBehaviour {
 
 	void setWeighting(){
 		// Color Weighting
-		int color_max = BallSpawner.colors.Length * (BallSpawner.colors.Length + 1);
+		int color_max = BallSpawner.Instance.colors.Length * (BallSpawner.Instance.colors.Length + 1);
 		BallSpawner.color_weight = new int[color_max];
 		int color_counter = 0;
-		for (int i = 0; i < BallSpawner.colors.Length; i++) {
+		for (int i = 0; i < BallSpawner.Instance.colors.Length; i++) {
 			if (color != i) {
-				for (int j = color_counter; j < BallSpawner.colors.Length; j++) {
+				for (int j = color_counter; j < BallSpawner.Instance.colors.Length; j++) {
 					BallSpawner.color_weight [j] = i;
 					color_counter++;
 				}
 			} else {
-				for (int j = color_counter; j < (BallSpawner.colors.Length * 2); j++) {
+				for (int j = color_counter; j < (BallSpawner.Instance.colors.Length * 2); j++) {
 					BallSpawner.color_weight [j] = i;
 					color_counter++;
 				}
 			}
 		}
 		// Shape Weighting
-		int shape_max = BallSpawner.shapes.Length * (BallSpawner.shapes.Length + 1);
+		int shape_max = BallSpawner.Instance.shapes.Length * (BallSpawner.Instance.shapes.Length + 1);
 		BallSpawner.shape_weight = new int[shape_max];
 		int shape_counter = 0;
-		for (int i = 0; i < BallSpawner.shapes.Length; i++) {
+		for (int i = 0; i < BallSpawner.Instance.shapes.Length; i++) {
 			if (i != shape) {
-				for (int j = shape_counter; j < BallSpawner.shapes.Length; j++) {
+				for (int j = shape_counter; j < BallSpawner.Instance.shapes.Length; j++) {
 					BallSpawner.shape_weight [j] = i;
 					shape_counter++;
 				}
 			} else {
-				for (int j = shape_counter; j < (BallSpawner.shapes.Length * 2); j++) {
+				for (int j = shape_counter; j < (BallSpawner.Instance.shapes.Length * 2); j++) {
 					BallSpawner.shape_weight [j] = i;
 					shape_counter++;
 				}
@@ -104,4 +106,5 @@ public class GameView : MonoBehaviour {
 		print ("Valid: " + totalValid);
 		print ("Invalid: " + totalInvalid);
 	}
+}
 }

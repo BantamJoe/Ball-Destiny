@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using SL;
+using UnityEngine;
 using System.Collections;
 
+namespace SL{
 public class InputController : MonoBehaviour { 
 	public float minX, maxX;
 
@@ -17,5 +19,5 @@ public class InputController : MonoBehaviour {
 		this.transform.position = paddlePos;
 	}
 }
-
+}
 // 1.18 14.8

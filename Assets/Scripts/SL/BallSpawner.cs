@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+namespace SL{
 public class BallSpawner : MonoBehaviour {
 
 	public int initial_ball = 5; // Initial Ball Counting
@@ -13,10 +14,6 @@ public class BallSpawner : MonoBehaviour {
 	public static BallSpawner Instance { get { return _instance;} private set{}}
 	private static BallSpawner _instance;
 
-	public GameObject shape1;
-	public GameObject shape2;
-	public GameObject shape3;
-
 	public float minX = -3.2f;
 	public float maxX = 3.2f;
 	public float minY = 5.4f;
@@ -27,7 +24,7 @@ public class BallSpawner : MonoBehaviour {
 	public static bool startCounting = false;
 	private static bool finished = false;
 
-	public static GameObject[] shapes;
+	public GameObject[] shapes;
 
 	public static int[] shape_weight;
 	public static int[] color_weight;
@@ -35,7 +32,7 @@ public class BallSpawner : MonoBehaviour {
 	[HideInInspector]
 	public Color type;
 
-	public static Color[] colors = new Color[] {
+	public Color[] colors = new Color[] {
 		new Color32 (88, 180, 214, 255),
 		new Color32 (214, 49, 212, 255),
 		new Color32 (255, 215, 56, 255)
@@ -62,12 +59,6 @@ public class BallSpawner : MonoBehaviour {
 		// Set Initial Gracity
 		current_gravity = initial_gravity;
 		Physics2D.gravity = new Vector2 (0, -current_gravity);
-
-		// Add Shapes
-		shapes = new GameObject[3];
-		shapes [0] = shape1;
-		shapes [1] = shape2;
-		shapes [2] = shape3;
 	}
 
 	public IEnumerator SpawnCircles (int cnt)
@@ -131,4 +122,5 @@ public class BallSpawner : MonoBehaviour {
 			}
 		}
 	}
+}
 }

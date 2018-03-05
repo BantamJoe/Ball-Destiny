@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using SL;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace SL{
 public class BottomCollider : MonoBehaviour {
 
 	// Use this for initialization
@@ -28,4 +30,5 @@ public class BottomCollider : MonoBehaviour {
 		}
 	}
 
+}
 }

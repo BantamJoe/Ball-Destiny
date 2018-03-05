@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using SL;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace SL{
 public class ScoreController : MonoBehaviour {
 	public static int score;
 
@@ -18,4 +20,5 @@ public class ScoreController : MonoBehaviour {
 	void Update () {
 		text.text = "SCORE: " + score;
 	}
+}
 }

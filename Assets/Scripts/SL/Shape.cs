@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using SL;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace SL{
 public class Shape : MonoBehaviour {
 
 	public int color;
@@ -16,4 +18,5 @@ public class Shape : MonoBehaviour {
 	void Update () {
 		
 	}
+}
 }

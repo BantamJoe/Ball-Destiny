@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using SL;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace SL{
 public class Paddle : MonoBehaviour {
 
 	// Use this for initialization
@@ -39,4 +41,5 @@ public class Paddle : MonoBehaviour {
 	void widenPaddle() {
 		this.transform.localScale += new Vector3(0.01F, 0, 0);
 	}
+}
 }
