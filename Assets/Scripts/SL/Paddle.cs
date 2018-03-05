@@ -28,8 +28,10 @@ public class Paddle : MonoBehaviour {
 		int shape = characteristic.shape;
 		if (GameView.Instance.color == color && GameView.Instance.shape == shape) {
 			GameView.countValid ();
+			ScoreController.score++;
 			widenPaddle ();
 		} else {
+			ScoreController.score--;
 			GameView.countInvalid ();
 		}
 	}

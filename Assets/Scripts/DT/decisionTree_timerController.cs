@@ -18,6 +18,6 @@ public class decisionTree_timerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "NEXT: " + time;
+		text.text = time.ToString();
     }
 }
