@@ -15,8 +15,11 @@ public class MainMenu : MonoBehaviour {
 		
 	}
 
-    public void PalyGame()
+    public void PlayGame()
     {
+		// This Command rely on Build Scene Order
+		// MainMenu should be at first order (0)
+		// PlayMenu shoud be at second order (1)
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

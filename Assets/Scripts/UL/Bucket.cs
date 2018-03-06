@@ -1,9 +1,9 @@
-﻿using NN;
+﻿using UL;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace NN{
+namespace UL{
 public class Bucket : MonoBehaviour {
 	public Color32 color;
 	public Vector2 position;
