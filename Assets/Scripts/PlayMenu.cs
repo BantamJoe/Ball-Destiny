@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayMenu : MonoBehaviour {
-
+	public string scene;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,7 +15,7 @@ public class PlayMenu : MonoBehaviour {
 		
 	}
 
-	public void loadScene(string scene) {
-		SceneManager.LoadScene(scene);
+	public void loadScene() {
+		SceneManager.LoadScene (scene);
 	}
 }
