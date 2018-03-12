@@ -23,14 +23,19 @@ namespace LR
         void scoring(){
             List<Vector2> nodeList = shape.posList;         // List of the position of nodes
             List<Vector2> points = Line.SharePoints;        // List of the position of Line points
-            Vector2 lastPot = points.Last();
-            Vector2 firstPot = points[0];
-            float error = 0;
+            if(points.Count > 2 && GameObject.FindGameObjectWithTag("Line"))
+            {
+                Vector2 lastPot = points.Last();
+                Vector2 firstPot = points[0];
+                float error = 0;
 
-            if (points.Count > 0)
-                for(int i = 0; i < nodeList.Count; i++)
-                    error += GetError(nodeList[i], firstPot, lastPot);
-            scoreController.score = error;
+                if (points.Count > 0)
+                    for (int i = 0; i < nodeList.Count; i++)
+                        error += GetError(nodeList[i], firstPot, lastPot);
+                scoreController.score = error;
+            }
+            else
+                scoreController.score = 0;
         }
 
         float GetError(Vector2 node, Vector2 firstPot, Vector2 lastPot)
