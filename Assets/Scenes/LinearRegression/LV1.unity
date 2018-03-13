@@ -562,7 +562,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colors:
-  - {r: 0.022058845, g: 0.022058845, b: 0.022058845, a: 1}
+  - {r: 0.878, g: 0.803, b: 0.703, a: 1}
+  - {r: 0.853, g: 0.766, b: 1, a: 1}
+  - {r: 0.728, g: 0.609, b: 0, a: 1}
   shapes:
   - {fileID: 1572888233690744, guid: bb35b344e82134942b843e17cf4bf29c, type: 2}
   numOfShape: 10
