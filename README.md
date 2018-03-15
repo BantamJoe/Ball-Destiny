@@ -8,7 +8,7 @@ The Hong Kong Polytechnic University, HKSAR China
 <b><u>Introduction</i></b>
 
 Ball Destiny is a mobile game that aimed at presenting the fundamental concepts of artificial intelligence and machine learning algorithms (AIML). It primarily targets to senior elementary and junior secondary students. The game requires no particular scientific background. Thus, it can also interest the general public curious about AIML. 
-AIML knowledge is taught in Unijjversity; the game shall benefit secondary students to learn relevant knowledge earlier, in order to strengthen their computing and algorithmic competence in university. 
+AIML knowledge is taught in University; the game shall benefit secondary students to learn relevant knowledge earlier, in order to strengthen their computing and algorithmic competence in university. 
 
 <b><u>Game Design</i></b>
 
