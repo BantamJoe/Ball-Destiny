@@ -1,23 +1,47 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace LR
-{
-    public class shape : MonoBehaviour { 
+namespace LR{
+    public class shape : MonoBehaviour{ 
     
         public Color[] colors = new Color[] { };
         public GameObject[] shapes = new GameObject[] { };
-        public int numOfShape = 2;
+        public int numOfShape;
+        public float period;
 
         public Vector2 maxPos;
         public Vector2 minPos;
 
         public static List<Vector2> posList;
 
+        float timer_f = 0f;
+        int count = 1;
+        int once = 0;
+
+        public static int ShareNumOfShape;
+        public static int ExistedShape;
+
         void Start(){
             if (posList == null) posList = new List<Vector2>();
-            for (int i = 0; i < numOfShape; i++)
-                CreateObject(i);
+            ShareNumOfShape = numOfShape;
+        }
+
+        void Update(){
+            timer_f += Time.deltaTime;
+            
+            timerController.time = (int)timer_f;
+            
+            if (LineCreator.FinishDraw && once == 0){
+                once++;
+                ExistedShape = count;
+                for (;count <= numOfShape; count++)
+                    CreateObject(count - 1);
+            }else{
+                if ((int)timer_f == (count * period) && count <= numOfShape){
+                    CreateObject(count - 1);
+                    count++;
+                }
+            }
         }
 
         public void CreateObject(int num){

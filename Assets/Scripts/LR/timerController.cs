@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace LR
-{
-    public class timerController : MonoBehaviour
-    {
+namespace LR{
+    public class timerController : MonoBehaviour{
         public static int time;
 
         Text text;
 
-        private void Awake()
-        {
+        private void Awake(){
             text = GetComponent<Text>();
             time = 0;
         }
 
         // Update is called once per frame
-        void Update()
-        {
+        void Update(){
             text.text = "Time: " + time.ToString();
         }
     }

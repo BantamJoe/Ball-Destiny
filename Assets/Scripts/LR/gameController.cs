@@ -7,24 +7,18 @@ namespace LR
 {
     public class gameController : MonoBehaviour
     {
-        float timer_f = 0f;
-        int timer_i = 0;
-                
+        public int weighting;
+        private int ShareNumOfShape;
+        
         void Update(){
-            timer_f += Time.deltaTime;
-            timer_i = (int)timer_f;
-            if(5 - timer_i >= 0)
-                timerController.time = 5-timer_i;
-            
-            if(timer_i >= 5)
-                scoring();
+            scoring();  // Calculate the final score
         }
         
         void scoring(){
             List<Vector2> nodeList = shape.posList;         // List of the position of nodes
             List<Vector2> points = Line.SharePoints;        // List of the position of Line points
-            if(points.Count > 2 && GameObject.FindGameObjectWithTag("Line"))
-            {
+            ShareNumOfShape = shape.ShareNumOfShape;
+            if (points.Count > 2 && GameObject.FindGameObjectWithTag("Line")){
                 Vector2 lastPot = points.Last();
                 Vector2 firstPot = points[0];
                 float error = 0;
@@ -32,14 +26,14 @@ namespace LR
                 if (points.Count > 0)
                     for (int i = 0; i < nodeList.Count; i++)
                         error += GetError(nodeList[i], firstPot, lastPot);
-                scoreController.score = error;
+                int FinalScore = weighting * (ShareNumOfShape - shape.ExistedShape) + ((100 - (int)error)*2);
+                scoreController.score = FinalScore;
             }
             else
                 scoreController.score = 0;
         }
 
-        float GetError(Vector2 node, Vector2 firstPot, Vector2 lastPot)
-        {
+        float GetError(Vector2 node, Vector2 firstPot, Vector2 lastPot){
             return Math.Abs(node.y - EquationGetY(firstPot, lastPot, node.x));
         }
 

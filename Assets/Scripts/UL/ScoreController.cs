@@ -10,9 +10,7 @@ public class ScoreController : MonoBehaviour {
 	public static int totalValid;
 	public static int score;
 	public static int invalid;
-	private static int test10 = 0;
 	private static int last = 0;
-
 	public Text text;
 
 	// Use this for initialization

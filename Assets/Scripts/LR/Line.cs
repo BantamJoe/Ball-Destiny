@@ -25,7 +25,7 @@ namespace LR{
             points.Add(point);
             SharePoints.Add(point);
 
-            lineRenderer.numPositions = points.Count;
+            lineRenderer.positionCount = points.Count;
             lineRenderer.SetPosition(points.Count - 1, point);
 
             if (points.Count > 1)
@@ -37,8 +37,7 @@ namespace LR{
             Vector2 firstPos = points[0];
             Vector2 currentPos = firstPos;
             
-            for (int i = 0; i < points.Count; i++)
-            {
+            for (int i = 0; i < points.Count; i++){
                 if (currentPos.x <= lastPos.x){
                     lineRenderer.SetPosition(i, currentPos);
                     currentPos.x++;
@@ -61,6 +60,10 @@ namespace LR{
                     if (points[i + 1].x < points[i].x)
                         fitline = false;
             return fitline;
+        }
+
+        public bool IsEnoughPoints(){
+            return points.Count > 10 ? true : false;
         }
     }
 }
