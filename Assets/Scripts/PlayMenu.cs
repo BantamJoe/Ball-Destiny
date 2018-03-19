@@ -7,15 +7,15 @@ public class PlayMenu : MonoBehaviour {
 	public string scene;
 	// Use this for initialization
 	void Start () {
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
-	public void loadScene() {
-		SceneManager.LoadScene (scene);
+	public void loadScene(string Dir) {
+		SceneManager.LoadScene("Scenes/" + Dir);
 	}
 }
