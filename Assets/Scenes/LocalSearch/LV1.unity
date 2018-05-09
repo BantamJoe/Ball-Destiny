@@ -483,7 +483,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5, y: 5}
-    newSize: {x: 25, y: 25}
+    newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -536,12 +536,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 52f1776409fcbe04d8eab14a8cb825d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f99bbb48fed61894eaecaca127520054, type: 3}
   m_Color: {r: 0.3764706, g: 0.49019608, b: 0.54509807, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 25, y: 25}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -704,7 +704,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dfef01f1cfa05402a827e144d9fce4f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8147663a3a547dd4bbec1bd8904eb937, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

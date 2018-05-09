@@ -740,11 +740,7 @@ MonoBehaviour:
   ScaleSize: 1
   DisplayText: 1
   TextString: 100%
-  TextColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  TextColor: {r: 0, g: 0, b: 0, a: 1}
   OverRideTextColorWithGradient: 0
   TextFont: {fileID: 12800000, guid: 8add01aca8e4b438d8d1f7eae3b04a09, type: 3}
   TextSize: 45
@@ -754,18 +750,9 @@ MonoBehaviour:
   ValueBar: {fileID: 2800000, guid: 49c1acd34800b4a0d9a7904f278be726, type: 3}
   Foreground: {fileID: 0}
   GradientColors:
-  - r: 1
-    g: 0
-    b: 0
-    a: 0
-  - r: 0.9862069
-    g: 1
-    b: 0
-    a: 0
-  - r: 0
-    g: 1
-    b: 0.17241383
-    a: 0
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0.9862069, g: 1, b: 0, a: 0}
+  - {r: 0, g: 1, b: 0.17241383, a: 0}
 --- !u!1 &460551557
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,11 +953,7 @@ MonoBehaviour:
   ScaleSize: 1
   DisplayText: 1
   TextString: 100%
-  TextColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  TextColor: {r: 0, g: 0, b: 0, a: 1}
   OverRideTextColorWithGradient: 0
   TextFont: {fileID: 12800000, guid: 8add01aca8e4b438d8d1f7eae3b04a09, type: 3}
   TextSize: 45
@@ -980,18 +963,9 @@ MonoBehaviour:
   ValueBar: {fileID: 2800000, guid: c0e7a998abec94dd2a5d7253b9f4df71, type: 3}
   Foreground: {fileID: 0}
   GradientColors:
-  - r: 1
-    g: 0
-    b: 0
-    a: 0
-  - r: 0.9862069
-    g: 1
-    b: 0
-    a: 0
-  - r: 0
-    g: 1
-    b: 0.17241383
-    a: 0
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0.9862069, g: 1, b: 0, a: 0}
+  - {r: 0, g: 1, b: 0.17241383, a: 0}
 --- !u!1 &862832893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,11 +1440,7 @@ MonoBehaviour:
   ScaleSize: 1
   DisplayText: 1
   TextString: 100%
-  TextColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  TextColor: {r: 0, g: 0, b: 0, a: 1}
   OverRideTextColorWithGradient: 0
   TextFont: {fileID: 12800000, guid: 8add01aca8e4b438d8d1f7eae3b04a09, type: 3}
   TextSize: 45
@@ -1480,18 +1450,9 @@ MonoBehaviour:
   ValueBar: {fileID: 2800000, guid: 1a0009162d22b4d4086964aef0530908, type: 3}
   Foreground: {fileID: 0}
   GradientColors:
-  - r: 1
-    g: 0
-    b: 0
-    a: 0
-  - r: 0.9862069
-    g: 1
-    b: 0
-    a: 0
-  - r: 0
-    g: 1
-    b: 0.17241383
-    a: 0
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0.9862069, g: 1, b: 0, a: 0}
+  - {r: 0, g: 1, b: 0.17241383, a: 0}
 --- !u!1 &1566478195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,35 +1485,17 @@ MonoBehaviour:
   - {fileID: 1528244257554628, guid: 716b3d8519c404bdab0f25025686472a, type: 2}
   - {fileID: 1992482212946810, guid: df03703a0eb21454c8ced7a878a724b5, type: 2}
   ans_colors:
-  - r: 0.34509805
-    g: 0.7058824
-    b: 0.8392157
-    a: 1
-  - r: 0.8392157
-    g: 0.19215687
-    b: 0.83137256
-    a: 1
-  - r: 1
-    g: 0.84313726
-    b: 0.21960784
-    a: 1
+  - {r: 0.34509805, g: 0.7058824, b: 0.8392157, a: 1}
+  - {r: 0.8392157, g: 0.19215687, b: 0.83137256, a: 1}
+  - {r: 1, g: 0.84313726, b: 0.21960784, a: 1}
   shapes:
   - {fileID: 1572888233690744, guid: bb35b344e82134942b843e17cf4bf29c, type: 2}
   - {fileID: 1528244257554628, guid: 716b3d8519c404bdab0f25025686472a, type: 2}
   - {fileID: 1992482212946810, guid: df03703a0eb21454c8ced7a878a724b5, type: 2}
   colors:
-  - r: 0.34509805
-    g: 0.7058824
-    b: 0.83921576
-    a: 1
-  - r: 0.83921576
-    g: 0.19215688
-    b: 0.8313726
-    a: 1
-  - r: 1
-    g: 0.8431373
-    b: 0.21960786
-    a: 1
+  - {r: 0.34509805, g: 0.7058824, b: 0.83921576, a: 1}
+  - {r: 0.83921576, g: 0.19215688, b: 0.8313726, a: 1}
+  - {r: 1, g: 0.8431373, b: 0.21960786, a: 1}
   scorebars:
   - {fileID: 423959514}
   - {fileID: 579049463}
@@ -1781,7 +1724,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dfef01f1cfa05402a827e144d9fce4f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8147663a3a547dd4bbec1bd8904eb937, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
