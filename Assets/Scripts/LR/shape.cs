@@ -11,6 +11,7 @@ namespace LR{
 
         public Vector2 maxPos;
         public Vector2 minPos;
+        public int updown;      // 1 Up  0 Down
 
         public static List<Vector2> posList;
 
@@ -52,6 +53,8 @@ namespace LR{
             var offsetY = Random.Range(0, maxPos.y);
             var RanX = minPos.x + num + offsetX;
             var RanY = minPos.y + (num/2) + offsetY;
+            if (updown == -1)
+                RanY = maxPos.y - (num / 2) - offsetY;
             
             posList.Add(new Vector2(RanX, RanY));
 

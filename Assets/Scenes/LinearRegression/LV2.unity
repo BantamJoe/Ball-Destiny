@@ -703,7 +703,7 @@ MonoBehaviour:
   period: 3
   maxPos: {x: 5, y: 5}
   minPos: {x: -5, y: -5}
-  updown: 1
+  updown: -1
 --- !u!4 &1561618613
 Transform:
   m_ObjectHideFlags: 0

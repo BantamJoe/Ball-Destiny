@@ -745,10 +745,10 @@ MonoBehaviour:
   TextFont: {fileID: 12800000, guid: 8add01aca8e4b438d8d1f7eae3b04a09, type: 3}
   TextSize: 45
   TextOffset: {x: 150, y: 0}
-  Background: {fileID: 2800000, guid: 15801e22d11f34b69b46c5551b0b00fe, type: 3}
-  Mask: {fileID: 2800000, guid: fee0daaa2803b4d61b4e4d7b28673caa, type: 3}
-  ValueBar: {fileID: 2800000, guid: 49c1acd34800b4a0d9a7904f278be726, type: 3}
-  Foreground: {fileID: 0}
+  Background: {fileID: 2800000, guid: 88209659b5edb4eb8b1b49967f96f469, type: 3}
+  Mask: {fileID: 2800000, guid: e7df3cf58ae9e41f199ba72f0d7062b2, type: 3}
+  ValueBar: {fileID: 2800000, guid: a2d884a74444e423aad6d45c15241a22, type: 3}
+  Foreground: {fileID: 2800000, guid: 271e8314c7ffe49e8bb1dc8ba71edf95, type: 3}
   GradientColors:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 0.9862069, g: 1, b: 0, a: 0}
@@ -958,10 +958,10 @@ MonoBehaviour:
   TextFont: {fileID: 12800000, guid: 8add01aca8e4b438d8d1f7eae3b04a09, type: 3}
   TextSize: 45
   TextOffset: {x: 150, y: 0}
-  Background: {fileID: 2800000, guid: d2212ddc40c2844de940d98668682489, type: 3}
-  Mask: {fileID: 2800000, guid: 54c045ccc97ac40cbbc3cc419172ec0a, type: 3}
-  ValueBar: {fileID: 2800000, guid: c0e7a998abec94dd2a5d7253b9f4df71, type: 3}
-  Foreground: {fileID: 0}
+  Background: {fileID: 2800000, guid: 88209659b5edb4eb8b1b49967f96f469, type: 3}
+  Mask: {fileID: 2800000, guid: e7df3cf58ae9e41f199ba72f0d7062b2, type: 3}
+  ValueBar: {fileID: 2800000, guid: a2d884a74444e423aad6d45c15241a22, type: 3}
+  Foreground: {fileID: 2800000, guid: 271e8314c7ffe49e8bb1dc8ba71edf95, type: 3}
   GradientColors:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 0.9862069, g: 1, b: 0, a: 0}
@@ -1445,10 +1445,10 @@ MonoBehaviour:
   TextFont: {fileID: 12800000, guid: 8add01aca8e4b438d8d1f7eae3b04a09, type: 3}
   TextSize: 45
   TextOffset: {x: 150, y: 0}
-  Background: {fileID: 2800000, guid: b5fdf64c28843447cace7cbd7d26ab05, type: 3}
-  Mask: {fileID: 2800000, guid: ab496577d9c7f47c58b28c95b4e845c7, type: 3}
-  ValueBar: {fileID: 2800000, guid: 1a0009162d22b4d4086964aef0530908, type: 3}
-  Foreground: {fileID: 0}
+  Background: {fileID: 2800000, guid: 88209659b5edb4eb8b1b49967f96f469, type: 3}
+  Mask: {fileID: 2800000, guid: e7df3cf58ae9e41f199ba72f0d7062b2, type: 3}
+  ValueBar: {fileID: 2800000, guid: a2d884a74444e423aad6d45c15241a22, type: 3}
+  Foreground: {fileID: 2800000, guid: 271e8314c7ffe49e8bb1dc8ba71edf95, type: 3}
   GradientColors:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 0.9862069, g: 1, b: 0, a: 0}

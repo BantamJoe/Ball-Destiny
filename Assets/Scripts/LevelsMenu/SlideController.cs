@@ -18,7 +18,7 @@ public class SlideController : MonoBehaviour {
 
         Transform[] Levels = GetAllLevels();
         
-        if(Levels.Length > 1)
+        if(Levels.Length > 4)
         {
             distance = Vector3.Distance(Levels[1].transform.position, Levels[3].transform.position);    // Get the distance between two panel Level button
 
