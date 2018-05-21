@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 namespace SL{
 public class BallSpawner : MonoBehaviour {
 
-	public int initial_ball = 5; // Initial Ball Counting
-	public int increment_ball = 1; // Each Level add one more ball
-	public int passLevel = 10; // 50 Correct Ball will add one more ball
-	public float initial_gravity = 0.6f; // Initial Mass
+	public int initial_ball = 5;            // Initial Ball Counting
+	public int increment_ball = 1;          // Each Level add one more ball
+	public int passLevel = 10;              // 50 Correct Ball will add one more ball
+	public float initial_gravity = 0.6f;    // Initial Mass
 	public float increment_gravity = 0.01f; // Mass Increment per Level
 	public int maximum_block = 500;
 
@@ -29,6 +30,7 @@ public class BallSpawner : MonoBehaviour {
 	public static int[] shape_weight;
 	public static int[] color_weight;
 
+    public GameObject EndingPanel;
 	[HideInInspector]
 	public Color type;
 
@@ -41,14 +43,18 @@ public class BallSpawner : MonoBehaviour {
 	void Awake ()
 	{
 		_instance = this;
-	}
+        total = 0;
+        counter = 0;
+    }
 
 	void Start () {
 
-	}
+    }
 
-	void Update () {
-	}
+	void Update (){
+        End.title = SceneManager.GetActiveScene().name;     // Set the title of ending panel
+        End.message = "Score: " + ScoreController.score;
+    }
 
 	public void Spawn (int cnt)
 	{
@@ -76,12 +82,12 @@ public class BallSpawner : MonoBehaviour {
 	void SpawnCircle ()
 	{
 		total++;
-
+            
 		if (total < maximum_block) {
 			// int chosen_shape = shape_weight[UnityEngine.Random.Range (0, shape_weight.Length)];
 			int chosen_shape = UnityEngine.Random.Range (0, shapes.Length);
 			GameObject chosen = shapes [chosen_shape];
-
+            
 			var circle = Instantiate (chosen) as GameObject;
 			circle.transform.parent = transform;
 			// Random Range Spawn
@@ -116,10 +122,12 @@ public class BallSpawner : MonoBehaviour {
 
 			int remainingObject = GameObject.FindGameObjectsWithTag("ball").Length;
 			// Finished
-			if (remainingObject == 1) {
-				GameView.Instance.reporting ();
+			if (remainingObject == 1){
+                EndingPanel.SetActive(finished);
 
-			}
+                GameView.Instance.reporting();
+            }
+
 		}
 	}
 }

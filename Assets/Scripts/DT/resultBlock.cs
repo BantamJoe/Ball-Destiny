@@ -8,6 +8,7 @@ namespace DT
     {
         public string shape;
         public Color32 color;
+        public static int countDestroy;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -26,6 +27,7 @@ namespace DT
             }
             finally
             {
+                countDestroy++;
                 Destroy(other.gameObject);
             }
         }

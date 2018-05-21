@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 
 namespace LS
@@ -10,13 +11,33 @@ namespace LS
         float timer_f = 0f;
         int timer_i = 0;
 
+        public int timeout;
+
         public GameObject placeHolder;
-        
+        public GameObject EndingPanel;
+
+        private void Awake(){
+            timer_f = 0f;
+            timer_i = 0;
+            End.title = "";
+            End.message = "";
+        }
+
         void Update(){
             timer_f += Time.deltaTime;
             timer_i = (int)timer_f;
-            timerController.time = timer_i;
+            if (timer_i <= timeout)
+                timerController.time = timeout - timer_i;
+            else
+                GameOver();
+
             Scoring();
+        }
+
+        void GameOver(){
+            End.title = SceneManager.GetActiveScene().name;
+            End.message = "Cover: " + scoreController.percentage + "\n" + "Used: " + scoreController.count;
+            EndingPanel.SetActive(true);
         }
 
         void Scoring(){
@@ -150,13 +171,14 @@ namespace LS
 
             float startX, startY, endX, endY;
             Vector2 endPoint = polygon[polygonLength - 1];
-            endX = endPoint.x;
-            endY = endPoint.y;
-            while (i < polygonLength)
-            {
-                startX = endX; startY = endY;
+            endX = endPoint.x * placeArea.scale.x;
+            endY = endPoint.y * placeArea.scale.y;
+            while (i < polygonLength){
+                startX = endX;
+                startY = endY;
                 endPoint = polygon[i++];
-                endX = endPoint.x; endY = endPoint.y;
+                endX = endPoint.x * placeArea.scale.x;
+                endY = endPoint.y * placeArea.scale.y;
 
                 inside ^= (endY > pointY ^ startY > pointY) && ((pointX - endX) < (pointY - endY) * (startX - endX) / (startY - endY));
             }
@@ -166,11 +188,12 @@ namespace LS
         public bool IsPointInCircle(Vector2 point, float radius, Vector2 center)
         {
             bool inside = false;
+            float scale = placeArea.scale.x * placeArea.scale.y;
 
             float x = (point.x - center.x) * (point.x - center.x);
             float y = (point.y - center.y) * (point.y - center.y);
             float L = x + y;
-            float R = radius * radius;
+            float R = radius * radius * scale;
             if (L < R)
                 inside = true;
             return inside;

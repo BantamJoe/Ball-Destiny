@@ -412,7 +412,7 @@ MonoBehaviour:
   initial_ball: 10
   increment_ball: 1
   passLevel: 50
-  initial_gravity: 0.6
+  initial_gravity: 5
   increment_gravity: 0.2
   maximum_block: 50
   minX: -7
